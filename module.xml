@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Export generator="Cache" version="25">
-  <Document name="fhir-server.ZPM">
+  <Document name="custom2hl7.ZPM">
     <Module>
-      <Name>fhir-server</Name>
-      <Version>1.3.1</Version>
-      <Description>InterSystems FHIR Server with a demo frontend</Description>
-      <Keywords>FHIR,Server</Keywords>
+      <Name>custom2hl7</Name>
+      <Version>1.0.0</Version>
+      <Description>Sample how to convert from custom format to HL7v2 and FHIR using IRIS for Health</Description>
+      <Keywords>FHIR,HL7</Keywords>
       <Packaging>module</Packaging>
-    <SourcesRoot>src</SourcesRoot>
-    <Invokes>
-    <Invoke Class="fhirtemplate.Setup" Method="SetupFHIRServer" Phase="Activate" When="After" ></Invoke>
-    </Invokes>
-    <Resource Name="fhirtemplate.PKG"/>
-    <FileCopy Name="data/fhir/" Target="${mgrdir}test-data-fhir/"/>
+      <SourcesRoot>src</SourcesRoot>
+      <Resource Name="fhirtemplate.PKG"/>
+      <Resource Name="custom2hl7.PKG"/>
+      <Invokes>
+        <Invoke Class="fhirtemplate.Setup" Method="SetupFHIRServer" Phase="Activate" When="After" ></Invoke>
+      </Invokes>
+      <FileCopy Name="data/fhir/" Target="${mgrdir}test-data-fhir/"/>
       <CSPApplication
         Url="/fhirUI"
         SourcePath="/fhirUI"
