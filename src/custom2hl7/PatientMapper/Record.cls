@@ -55,7 +55,7 @@ Property LON As %String;
 
 Property HEALTHCAREEXPENSES As %String;
 
-Property HEALTHCARECOVERAGE As %String;
+Property HEALTHCARECOVERAGE As %String (MAXLEn = "") ;
 
 Parameter RECORDMAPGENERATED = 1;
 
